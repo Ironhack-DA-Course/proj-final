@@ -1,0 +1,18 @@
+[project]
+name = "Visual Studio Code Extensions-Vulnerabilitiess"
+version = "0.1.0"
+description = "Final project Ironhack DA-2k25"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "graphviz>=0.21",
+    "imblearn>=0.0",
+    "ipykernel>=6.30.0",
+    "jupyter>=1.1.1",
+    "optuna>=4.4.0",
+    "optuna-dashboard>=0.19.0",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.5",
+    "xlrd>=2.0.2",
+]

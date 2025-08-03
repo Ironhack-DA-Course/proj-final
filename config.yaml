@@ -1,0 +1,7 @@
+data:
+  raw:
+    file_scraped: "../data/raw/vscode_extensions_scraped_0625.csv"
+    file_verified: "../data/raw/VSCode Extensions_Verified.csv"
+    file_vulnerable: "../data/raw/VSCode Extensions_Vulnerabilities.csv"
+  clean:
+    file_cleaned: "../data/clean/extensions_cleaned.csv"
