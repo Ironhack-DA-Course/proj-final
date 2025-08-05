@@ -3,5 +3,6 @@ data:
     file_scraped: "../data/raw/vscode_extensions_scraped_0825.csv"
     file_verified: "../data/raw/VSCode Extensions_Verified.csv"
     file_vulnerable: "../data/raw/VSCode Extensions_Vulnerabilities.csv"
+    file_ext_repo: "../data/raw/extensions_repos_full.csv"
   clean:
     file_cleaned: "../data/clean/extensions_cleaned.csv"
