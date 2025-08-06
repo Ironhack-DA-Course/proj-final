@@ -1,7 +1,7 @@
 [project]
-name = "Visual Studio Code Extensions-Vulnerabilitiess"
+name = "VS_Code_Extensions-Vulnerabilities"
 version = "0.1.0"
-description = "Final project Ironhack DA-2k25"
+description = "Final project Ironhack DA-2025"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -14,5 +14,6 @@ dependencies = [
     "scikit-learn>=1.7.1",
     "seaborn>=0.13.2",
     "statsmodels>=0.14.5",
+    "wordcloud>=1.9.4",
     "xlrd>=2.0.2",
 ]

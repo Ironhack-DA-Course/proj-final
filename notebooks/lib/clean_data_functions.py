@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+import re
+  
+
+def clean_ext_publisher(x):
+    if isinstance(x, str):
+        text = str(x).strip().lower()
+        if text.startswith("ms"):
+            return "microsoft"
+        else:
+            return x.lower()
+    return x
+
+def clean_repo_publisher(x):
+    if isinstance(x, str):
+        return str(x).strip().lower().replace(" ", "")
+    return x
+
+def clean_ext_version(x):
+    if isinstance(x, str):
+        text = str(x).strip().lower()
+        if "." in text:
+            return text.split(".")[0]
+    return x
+    
