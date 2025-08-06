@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 import re
-  
+import requests
+import time
+from typing import List, Dict
 
 def clean_ext_publisher(x):
     if isinstance(x, str):
@@ -23,4 +25,3 @@ def clean_ext_version(x):
         if "." in text:
             return text.split(".")[0]
     return x
-    
