@@ -5,4 +5,5 @@ data:
     file_vulnerable: "../data/raw/VSCode Extensions_Vulnerabilities.csv"
     file_ext_repo: "../data/raw/extensions_repos_full.csv"
   clean:
-    file_cleaned: "../data/clean/extensions_cleaned.csv"
+    file_scrap_cleaned: "../data/clean/extensions_scrap_cleaned.csv"
+    file_data_cleaned: "../data/clean/extensions_data_cleaned.csv"
