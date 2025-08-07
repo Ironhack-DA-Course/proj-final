@@ -28,6 +28,7 @@ notebooks/.ipynb_checkpoints/
 notebooks/.env
 notebooks/.DS_Store
 notebooks/__pycache__/
+notebooks/*.py
 
 notebooks/lib/__pycache__/
 notebooks/lib/github_validator.py

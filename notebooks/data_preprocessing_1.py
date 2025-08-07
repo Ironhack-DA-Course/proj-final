@@ -13,7 +13,7 @@ import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.ticker as ticker
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 
 #lib
 from lib.clean_data_functions import clean_ext_version, clean_ext_publisher, clean_repo_publisher
