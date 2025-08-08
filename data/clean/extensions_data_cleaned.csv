@@ -1,4 +1,4 @@
-ext_version,ext_categories,ext_install_count,ext_rating,verified,repository,total_vulners,critical__vulners,high__vulners,medium__vulners,low__vulners,repo_owner,repo_name,repo_stars,repo_forks,repo_languages
+ext_version,ext_categories,ext_install_count,ext_rating,verified,repository,total_vulners,critical_vulners,high_vulners,medium_vulners,low_vulners,repo_owner,repo_name,repo_stars,repo_forks,repo_languages
 2025,Programming Languages;Debuggers;Data Science;Machine Learning,177844528,4.19,True,https://github.com/Microsoft/vscode-python,0,0,0,0,0,Microsoft,vscode-python,4461,1247,typescript;python;javascript;jupyter notebook;shell;dockerfile
 2025,Programming Languages,146473811,3.01,True,https://github.com/microsoft/pylance-release,0,0,0,0,0,microsoft,pylance-release,1882,856,python;jupyter notebook
 2025,Extension Packs;Data Science;Machine Learning;Visualization;Notebooks,93931981,2.7,True,https://github.com/Microsoft/vscode-jupyter,0,0,0,0,0,Microsoft,vscode-jupyter,1401,337,typescript;python;jupyter notebook;javascript;shell;css;other

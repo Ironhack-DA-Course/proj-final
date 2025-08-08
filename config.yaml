@@ -7,3 +7,4 @@ data:
   clean:
     file_scrap_cleaned: "../data/clean/extensions_scrap_cleaned.csv"
     file_data_cleaned: "../data/clean/extensions_data_cleaned.csv"
+    file_eda_cleaned: "../data/clean/extensions_eda_cleaned.csv"
