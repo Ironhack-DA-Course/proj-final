@@ -1469,6 +1469,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pypickle"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/65/f2/214b962b5edf37ce86929e073ab4db953e4c495bcb58da511b4e49923159/pypickle-2.0.1.tar.gz", hash = "sha256:0cc1ee65293e4dfa90f0db6435e8021c6a83346be98d0fee81aceb2dad1fb091", size = 16901, upload-time = "2025-05-19T20:45:42.582Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/54/44/7fa273d9bb6f4b67db104eb90c4ca66eb40cb692c5028c836f500d06364e/pypickle-2.0.1-py3-none-any.whl", hash = "sha256:894afd81d26443e8589d21361a3cc04bd9f5c1535aaa627c3bee1212b58bdf74", size = 13615, upload-time = "2025-05-19T20:45:41.138Z" },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -2030,6 +2039,7 @@ dependencies = [
     { name = "jupyter" },
     { name = "optuna" },
     { name = "optuna-dashboard" },
+    { name = "pypickle" },
     { name = "python-dotenv" },
     { name = "scikit-learn" },
     { name = "seaborn" },
@@ -2046,6 +2056,7 @@ requires-dist = [
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "optuna", specifier = ">=4.4.0" },
     { name = "optuna-dashboard", specifier = ">=0.19.0" },
+    { name = "pypickle", specifier = ">=2.0.1" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "scikit-learn", specifier = ">=1.7.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
