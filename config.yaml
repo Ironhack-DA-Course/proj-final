@@ -9,9 +9,9 @@ data:
     file_data_cleaned: "../data/clean/extensions_data_cleaned.csv"
     file_eda_cleaned: "../data/clean/extensions_eda_cleaned.csv"
 model:
-  model_path: "../models/"
-  preprocessing:
+  base_path: "../models/"  
+  training_path: "../models/train/"
+  preprocessing_path: "../models/preprocess/"
+  preprocessing: 
     file_ohe: "../models/one_hot_encoder.pkl"
-  training:
-
 
