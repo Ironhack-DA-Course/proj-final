@@ -29,9 +29,11 @@ notebooks/.env
 notebooks/.DS_Store
 notebooks/__pycache__/
 notebooks/*.py
+notebooks/catboost_info/
 
 notebooks/lib/__pycache__/
 notebooks/lib/github_validator.py
+
 
 
 
