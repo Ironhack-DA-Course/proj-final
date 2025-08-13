@@ -1,8 +1,3 @@
-
-
-
-
-
 # VSCode Extensions security
 
 ## Introduction
@@ -13,12 +8,12 @@ The growing number of new extensions for VSCode reflects a vibrant and active co
 - 📋 Trello Board: [Project Tasks & Timeline](https://trello.com/b/73Tt6BOE/final) 
 - 🎬 Presentation : [Extension_Security](https://docs.google.com/presentation/d/../view) 
 
-## Datasets Used
+## Datasets
 
 We use 1 file with raw data.
 -  **extensions\_repos\_full:**   Demographics like categories, install_count, repository,... of extensions.
 
-The other 3 original raw data are for exercise by scraping more derived datas
+The other 3 files are raw data for exercise by scraping more derived datas
 - **VSCode Extensions\_Verified**: Validation, whether the extension is secured (scanning through Snyk) 
 - **VSCode Extensions\_Vulnerabilities**: Count of vulnerabilities with different weight
 - **vscode\_extensions\_scraped_0825**: total available extensions in VS-Code Market place until 08.2025
@@ -46,8 +41,7 @@ A Metadata(dictionary) is provided to help us understand the content of the colu
 - Multi values as value
 - Duplicated
 - Missing values
-- Inconsistent
-- Some only available through scraping  
+- Inconsistent data
 
 ##  Business Problem 
 Predict the vulnerabilities in VS Code extensions based on the project's metrics to enhance security practices against cyber threats.
@@ -59,7 +53,9 @@ Developing strategic investments to mitigate risks, protect intellectual propert
 * Extension with **high rating and forks of repository** also attracts the attackers
 * Extension with **high rating** attracts the exploiation
 
-* **Conclusion:**  
+## **Conclusion:**  
+* 
+* 
 
 **_Business recommendation_**: 
 - Create an online service/software to validate the proability of vulnerabilities based on the extension's metrics and project's status of repos.
@@ -118,15 +114,15 @@ Our methodology involved several key steps, focusing on data collection, data wr
 Split data into Train, Test set on features and target
 
 * **Feature Engineering:**
-    * One hot encoding: nominal categorical 
-    * Binning/Grouping: ordinal categorical
-    * power-transform on all numerical columns into  normal distribution    
-    * Recombine Train, Test set after applying feature engineering
+  - One hot encoding: nominal categorical 
+  - Binning/Grouping: ordinal categorical
+  - power-transform on all numerical columns into  normal distribution    
+  - Recombine Train, Test set after applying feature engineering
 
-    * Feature selection (Dimensionality Reduction): drop feature columns with high correlation to each other, but keep the ones with high correlation to target
+  - Feature selection (Dimensionality Reduction): drop feature columns with high correlation to each other, but keep the ones with high correlation to target
 
 * **Imbalanced handling:**
-* Use SMOTE to transform into balanced dataset
+  - Use SMOTE to transform into balanced dataset
 
 * **Model selection:** 
   - Ensemble:
@@ -146,8 +142,8 @@ Split data into Train, Test set on features and target
 
   - Instance-Based
     * KNN
-* **Define Metrics:**
 
+* **Define Metrics:**
   |Metric|Definition|	Meaning in Attrition Context|
   | ----------- | ----------- | ----------- |
   | Recall|  TP/(TP+FN) | 	Most important – how many true leavers you can catch|
@@ -157,34 +153,31 @@ Split data into Train, Test set on features and target
   | AUC-ROC	|Area under ROC Curve |	Measures ability to distinguish leavers vs. stayers at all thresholds|
 
 * **Model training:**  
-* Train train_dataset and predict test ones for each model
-for classification
+  - Train train_dataset and predict test ones for each model
+  for classification
 
 * **Model evaluation:** 
 Evaluate metrics for classification (target is category)
-* Accuracy
-* Recall
-* Prediction
-* F1
+  - Accuracy
+  - Recall
+  - Prediction
+  - F1
 -> Focus on "Recall" due to imbalanced in target "verified"
 -> Best performing model: Decision Tree
 
 **6. Model tuning:**
-- No Tuning with crossvalidation and hyperparams
+  * No Tuning with crossvalidation and hyperparams
 
-**7. Conclusion:**
-* Older adults with medical conditions should be prioritized.
-* Lifestyle factors matter — smoking still plays a role.
-* Medical metrics like glucose and BMI are useful but work best when combined with age or disease.
-* Tree-based models performed best and are interpretable.
+**7. Insight:**
+  * 
 
 **8. Limitation:**
-- Exploding -> data leakage -> explode after split training/test data
+  * Exploding -> data leakage -> explode after split training/test data
 
-- Aggregate Post-Explosion: If you explode but want to avoid duplication, group by 'ID' and aggregate the exploded 'V' values (e.g., as a list or concatenated string) before training.
+  * Aggregate Post-Explosion: If you explode but want to avoid duplication, group by 'ID' and aggregate the exploded 'V' values (e.g., as a list or concatenated string) before training.
 
 
-## Data Analysis Tools and Libraries:**
+## Data Analysis Tools and Libraries:
 * __Python__: The primary programming language for data manipulation and analysis.
 * __Pandas__: Essential for data loading, cleaning, and transformation.
 * __Matplotlib / Seaborn__: Used for creating various visualizations (bar charts, line graphs).
@@ -195,7 +188,7 @@ Evaluate metrics for classification (target is category)
 * __
 
 
-
+## Notebooks Usage:
 
 ##  Repository Structure
 ```
@@ -204,9 +197,9 @@ proj-final/
 ├── figures/                     # Sketching of structures in EDA, and ML
 ├── models/                      # Pickle files of preprocessing, training
 ├── notebooks/                   # Python notebooks with analysis
-   |__ lib/                      # Python functions
+    |── lib/                     # Python functions
 ├── README.md                    # This file
 └── slides                       # Url of presentation
 ```
-## 👥 Author
+## __Author__
 __*Robert*__
