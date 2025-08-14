@@ -136,6 +136,7 @@ Our methodology involved several key steps, focusing on data collection, data wr
     * Random Forest
     * Gradient Boosting
     * Ada Boost
+    * Bagging Classifier    
 
   - Trees:
     * Extra Trees
@@ -143,6 +144,13 @@ Our methodology involved several key steps, focusing on data collection, data wr
     * XGBoost
     * LightGBM
     * CatBoost
+
+  - Kernel-Based:
+    * SVC
+
+  - Probabilistic
+    * BernoulliNB
+    * GaussianNB
 
   - Linear
     * Logistic Regression
@@ -187,14 +195,15 @@ Evaluate metrics for classification (target is category)
 
 
 ## Data Analysis Tools and Libraries:
+
 * __Python__: The primary programming language for data manipulation and analysis.
 * __Pandas__: Essential for data loading, cleaning, and transformation.
 * __Matplotlib / Seaborn__: Used for creating various visualizations (bar charts, line graphs).
 * __Optuna__: Visualizations ML results
 * __Scikit-learn__: Machine learning training/tuning
-* __Axios/Cheerio__: Scraping library in JS/TS
 * __Pickle__: Export/Import model files
-* __
+* __imblearn__: ML lib for imbalanced 
+* __statmodel__: statistical  lib
 
 
 ## Notebooks Usage:
