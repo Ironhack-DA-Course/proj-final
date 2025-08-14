@@ -1,14 +1,14 @@
-# def main():
-#     print("Hello from final!")
+def main():
+    print("Hello from final!")
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
 
-import subprocess
+# import subprocess
 
-subprocess.run(["python", "./notebooks/data_preprocessing_1.py"])
-subprocess.run(["python", "./notebooks/eda_machine_learning_2.py"])
+# subprocess.run(["python", "./notebooks/data_preprocessing_1.py"])
+# subprocess.run(["python", "./notebooks/eda_machine_learning_2.py"])
 
 # .venv/Scripts/jupyter nbconvert --to script ./notebooks/eda_machine_learning_2.ipynb
 # .venv/Scripts/ipython main.py 

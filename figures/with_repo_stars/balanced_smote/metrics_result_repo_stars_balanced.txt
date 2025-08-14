@@ -2,9 +2,13 @@
 OVERALL RESULTS SUMMARY
 ==================================================
                      Accuracy  Precision  Recall  F1_Score  ROC_AUC
+BernoulliNB             67.80      20.63   71.37     32.01    75.52
 Decision Trees          90.49      54.00   70.48     61.15    81.74
+SVC                     77.49      27.73   69.72     39.68    80.17
 Logistic Regression     70.86      22.11   69.08     33.50    76.44
 Ada Boost               71.51      22.48   68.70     33.88    77.15
+Bagging Classifier      92.95      66.71   67.05     66.88    89.56
+GaussianNB              70.05      21.08   66.28     31.98    74.08
 XGBoost                 91.66      59.72   66.03     62.72    88.76
 KNN                     81.01      31.07   64.63     41.97    78.54
 Random Forest           90.88      56.31   62.98     59.46    88.35
