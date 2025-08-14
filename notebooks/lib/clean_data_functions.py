@@ -25,3 +25,8 @@ def clean_ext_version(x):
         if "." in text:
             return text.split(".")[0]
     return x
+
+def filter_string(s, valid_set):
+    if pd.isna(s):
+        return np.nan
+    return ';'.join([x for x in s.split(';') if x in valid_set])
