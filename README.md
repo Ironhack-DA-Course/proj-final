@@ -111,7 +111,7 @@ Our methodology involved several key steps, focusing on data collection, data wr
     - Most of them are correlated/ associated with each others but weak or medium relationship
     - **_'total\_vulners' strong correlation with high\_, medium\_, low\_vulners_**
     - repo\_stars strong relationship with repo\_forks
-    -> reduce dimensions "total\_vulners", "critical\_vulners"
+
 **4. Machine Learning:**
 
 * **Data Preprocessing:**
@@ -190,9 +190,6 @@ Evaluate metrics for classification (target is category)
 
 **8. Limitation:**
   * Exploding -> data leakage -> explode after split training/test data
-
-  * Aggregate Post-Explosion: If you explode but want to avoid duplication, group by 'ID' and aggregate the exploded 'V' values (e.g., as a list or concatenated string) before training.
-
 
 ## Data Analysis Tools and Libraries:
 
