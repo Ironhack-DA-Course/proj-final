@@ -22,21 +22,21 @@ A Metadata(dictionary) is provided to help us understand the content of the colu
 
 |                                |                                                        |         |
 |--------------------------------|--------------------------------------------------------|---------|
-| **_verified_:**                | check, whether extension's security is breached        | (boolean) |
-| **_ext_categories_:**          | categories of extension                                | (obj)   (multi values) |
-| **_ext\_install\_count_:**     | total number of installations of extension             | (int64) |
-| **_ext\_rating_:**             | rating of extension (avg of stars rating)              | (float64) |
-| **_repository_:**              | url of repository                                      | (obj)   | 
-| **_total\_vulners_:**          | number of detected vulnerabilities                     | (int64) |
-| **_critical\_vulners_:**       | number of critical(severity) vulnerabilities           | (int64) |
-| **_high\_vulners_:**           | number of high(severity) vulnerabilities               | (int64) |
-| **_medium\_vulners_:**         | number of medium(severity) vulnerabilities             | (int64) |
-| **_low\_vulners_:**            | number of low(severity) vulnerabilities                | (int64) |
-| **_repo\_owner_:**             | owner of repository (via column repository)            | (obj)   |
-| **_repo\_name_:**              | name of repository (via column repository)             | (obj)   |
-| **_repo\_stars_:**             | number of stars of repository (via column repository)  | (int64) |   
-| **_repo\_forks_:**             | number of forks of repository (via column repository)  | (int64) |   
-| **repo\_languages:**           | program languages used (via column repository)         | (obj)   (multi values) |
+| **_verified_**                | check, whether extension's security is breached        | (boolean) |
+| **_ext_categories_**          | categories of extension                                | (obj)   (multi values) |
+| **_ext\_install\_count_**     | total number of installations of extension             | (int64) |
+| **_ext\_rating_**             | rating of extension (avg of stars rating)              | (float64) |
+| **_repository_**              | url of repository                                      | (obj)   | 
+| **_total\_vulners_**          | number of detected vulnerabilities                     | (int64) |
+| **_critical\_vulners_**       | number of critical(severity) vulnerabilities           | (int64) |
+| **_high\_vulners_**           | number of high(severity) vulnerabilities               | (int64) |
+| **_medium\_vulners_**         | number of medium(severity) vulnerabilities             | (int64) |
+| **_low\_vulners_**            | number of low(severity) vulnerabilities                | (int64) |
+| **_repo\_owner_**             | owner of repository (via column repository)            | (obj)   |
+| **_repo\_name_**              | name of repository (via column repository)             | (obj)   |
+| **_repo\_stars_**             | number of stars of repository (via column repository)  | (int64) |   
+| **_repo\_forks_**             | number of forks of repository (via column repository)  | (int64) |   
+| **_repo\_languages_**           | program languages used (via column repository)         | (obj)   (multi values) |
 
 
 **Comments on the Data:**
@@ -133,17 +133,17 @@ Our methodology involved several key steps, focusing on data collection, data wr
 
 * **Model selection:** 
   - Ensemble:
+    * Bagging Classifier 
     * Random Forest
     * Gradient Boosting
     * Ada Boost
-    * Bagging Classifier    
+    * XGBoost    
+    * CatBoost   
 
   - Trees:
     * Extra Trees
-    * Decision Trees
-    * XGBoost
-    * LightGBM
-    * CatBoost
+    * Decision Trees    
+    * LightGBM    
 
   - Kernel-Based:
     * SVC
@@ -161,15 +161,14 @@ Our methodology involved several key steps, focusing on data collection, data wr
 * **Define Metrics:**
   |Metric|Definition|	Meaning in Attrition Context|
   | ----------- | ----------- | ----------- |
-  | Recall|  TP/(TP+FN) | 	Most important – how many true leavers you can catch|
+  | Recall|  TP/(TP+FN) | 	Most important | how many true leavers you can catch|
   | Precision	 |TP/(TP+FP) |	Among predicted leavers, how many are actually correct
   | Accuracy |(TP+TN)/Total |	Can be misleading with imbalanced data (e.g., <20% attrition) |
   | F1-score |2⋅Precision⋅Recall/(Precision+Recall) |Balanced trade-off between Precision and Recall|
   | AUC-ROC	|Area under ROC Curve |	Measures ability to distinguish leavers vs. stayers at all thresholds|
 
 * **Model training:**  
-  - Train train_dataset and predict test ones for each model
-  for classification
+  - Train train\_datat and predict test\_data ones for each model
 
 * **Model evaluation:** 
 Evaluate metrics for classification (target is category)
@@ -177,7 +176,7 @@ Evaluate metrics for classification (target is category)
   - Recall
   - Prediction
   - F1
--> Focus on "Recall" due to imbalanced in target "verified"
+-> Focus on "Recall", "F1" instead of only Accuracy due to imbalanced in target "verified"
 -> Best performing model overall: _BaggingClassifier(with default DecisionTreeClassifier)_
 
 **6. Model tuning:**
@@ -188,23 +187,26 @@ Evaluate metrics for classification (target is category)
   * Balance treatment improves performance of model with weak performances in imbalanced
   * DecisionTree/ Bagging are among the best -> decide for Bagging due to best overall in many score-categories in both balanced/imblanced dataset(Acc, Precision, Recall, F1)
 
-**8. Limitation:**
+**8. What's next?**
   * Exploding -> data leakage -> explode after split training/test data
+  * Expanding dataset with more incidents
+  * Tuning models Data-based, Model- Based
+  * Add new feature for prediction 'ext_publisher' Retail/Organisation
 
 ## Data Analysis Tools and Libraries:
 
-* __Python__: The primary programming language for data manipulation and analysis.
-* __Pandas__: Essential for data loading, cleaning, and transformation.
-* __Matplotlib / Seaborn__: Used for creating various visualizations (bar charts, line graphs).
-* __Optuna__: Visualizations ML results
-* __Scikit-learn__: Machine learning training/tuning
-* __Pickle__: Export/Import model files
+* __python__: The primary programming language for data manipulation and analysis.
+* __pandas__: Essential for data loading, cleaning, and transformation.
+* __matplotlib / seaborn__: Used for creating various visualizations (bar charts, line graphs).
+* __optuna__: Visualizations ML results
+* __scikit-learn__: Machine learning training/tuning
+* __pickle__: Export/Import model files
 * __imblearn__: ML lib for imbalanced 
 * __statmodel__: statistical  lib
 
 
 ## Notebooks Usage:
-* There are maybe 2 model files. One is with imbalanced and one is with balanced/SMOTE dataset. Check id of {X\_train}, {y\_train}
+* There are maybe 2 model files. One is with imbalanced and one is with balanced/SMOTE data. Check id of {X\_train}, {y\_train}
 * Execute notebooks in orders *\_1.ipynb, *\_2.ipynb, *\_3.ipynb
 
 ##  Repository Structure
